@@ -11,7 +11,8 @@ if command -v apt-get &> /dev/null; then
 fi
 
 # Install starship prompt
-curl -sS https://starship.rs/install.sh | sh
+curl -sS https://starship.rs/install.sh >> install_starship.sh
+sh install_starship.sh --yes
 
 # Create symlinks
 ./createSymLinks.sh
