@@ -25,10 +25,13 @@ echo "...done"
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in $files; do
     echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$file ~/dotfiles_old/
+    [[ -f $HOME/.$file ]] && mv ~/.$file ~/dotfiles_old/
+    
     echo "Creating symlink to $file in home directory."
+    [[ -f $dir/$file ]] && ln -nfs $dir/$file ~/.$file
 
-    ln -nfs $dir/$file ~/.$file    
+    echo "Sourcing $file"
+    [[ -f $HOME/.$file ]] && source $HOME/.$file
 done
 
 ln -nfs $HOME/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme $HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme
