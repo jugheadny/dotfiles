@@ -10,5 +10,8 @@ if command -v apt-get &> /dev/null; then
   sudo apt-get install -y bat
 fi
 
+# Install starship prompt
+curl -sS https://starship.rs/install.sh | sh
+
 # Create symlinks
 ./createSymLinks.sh
