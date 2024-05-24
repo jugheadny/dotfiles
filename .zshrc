@@ -8,12 +8,12 @@ docker() {
   fi
 }
 
-[[ -f ~/.zsh/aliases.zsh ]] && source ~/.zsh/aliases.zsh
-[[ -f ~/.zsh/functions.zsh ]] && source ~/.zsh/functions.zsh
-[[ -f ~/.zsh/starship.zsh ]] && source ~/.zsh/starship.zsh
-[[ -f ~/.zsh/nvm.zsh ]] && source ~/.zsh/nvm.zsh
-[[ -f ~/.zsh/wsl2fix.zsh ]] && source ~/.zsh/wsl2fix.zsh
-[[ -f ~/.zsh/goto.zsh ]] && source ~/.zsh/goto.zsh
+[[ -f ~/$HOME/dotfiles/aliases.zsh ]] && source ~/$HOME/dotfiles/aliases
+[[ -f ~/$HOME/dotfiles/functions.zsh ]] && source ~/$HOME/dotfiles/functions
+[[ -f ~/$HOME/dotfiles/starship.zsh ]] && source ~/$HOME/dotfiles/starship
+[[ -f ~/$HOME/dotfiles/nvm.zsh ]] && source ~/$HOME/dotfiles/nvm
+[[ -f ~/$HOME/dotfiles/wsl2fix.zsh ]] && source ~/$HOME/dotfiles/wsl2fix
+[[ -f ~/$HOME/dotfiles/goto.zsh ]] && source ~/$HOME/dotfiles/goto
 
 # Load Starship
 eval "$(starship init zsh)"
