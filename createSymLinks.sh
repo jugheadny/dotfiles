@@ -31,7 +31,7 @@ for file in $files; do
     [[ -f $dir/$file ]] && ln -nfs $dir/$file ~/.$file
 
     echo "Sourcing $file"
-    [[ -f $HOME/.$file ]] && source $HOME/.$file
+    # [[ -f $HOME/.$file ]] && source $HOME/.$file
 done
 
-ln -nfs $HOME/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme $HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme
+# ln -nfs $HOME/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme $HOME/.oh-my-zsh/custom/themes/spaceship.zsh-theme
