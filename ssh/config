@@ -1,3 +1,7 @@
+# Include all modular configs from your dotfiles folder
+# Include C:/Users/RobertKCarroll/dotfiles/ssh/config.d/*.conf
+
+# Global settings (the ones we optimized for YubiKey)
 Host *
   User rcarroll
 
@@ -7,14 +11,14 @@ Host *
 
   # KEY 1: Use your YubiKey No-Touch to get into the VM
   # We bypass the Agent here to avoid the "Error -59" crash
-  # IdentityFile "C:\Users\RobertKCarroll\.ssh\id_ed25519_sk_notouch"
+  # IdentityFile "~/.ssh/id_ed25519_sk_notouch"
   # IdentityAgent none
 
   # KEY 2: The VM will find this key in your Windows Agent for GitHub
   # This is the "Identity" that gets forwarded for Git commands
-  # IdentityFile "C:\Users\RobertKCarroll\.ssh\id_github_standard"
+  # IdentityFile "~/.ssh/id_github_standard"
 
-  IdentityFile "C:\Users\RobertKCarroll\.ssh\id_ed25519_sk_u2f"
+  IdentityFile "~/.ssh/id_ed25519_sk_u2f"
   IdentityAgent \\\\.\\pipe\\openssh-ssh-agent
 
   # Send a packet every 30 seconds to keep the NAT/Firewall open

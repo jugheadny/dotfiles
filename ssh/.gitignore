@@ -1,0 +1,7 @@
+# Ignore everything in the ssh folder...
+*
+# ...EXCEPT public keys and config files
+!*.pub
+!*.conf
+!config
+!.gitignore
