@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
+alias check_socket="echo $SSH_AUTH_SOCK"
 alias tf="terraform"
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
